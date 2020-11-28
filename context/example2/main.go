@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-// 主函数设置一个 ctx，传入每个 goroutine 第一个参数，可以实现超时退出协程的效果
+// 定义一个 ctx，主动取消协程，防止协程泄露
 func main() {
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
