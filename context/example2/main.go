@@ -38,7 +38,6 @@ func gen(ctx context.Context) <-chan int {
 				time.Sleep(time.Second)
 			}
 		}
-		fmt.Println("end_func")
 	}()
 	return ch
 }
